@@ -1,0 +1,9 @@
+from __future__ import unicode_literals
+
+from django.db import models
+
+class Post(models.Model):
+	title = models.CharField(max_length = 255)
+	sign = models.CharField(max_length = 31)
+	picture = models.ImageField(upload_to  = 'static')
+	created_at = models.DateTimeField(auto_now_add=True)
